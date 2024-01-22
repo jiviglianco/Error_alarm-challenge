@@ -1,6 +1,7 @@
 // Global variables
 var errorCount = 0
 var lastNotificationTime = null
+var emailNotificationSent = false
 
 // Function to log errors
 function logError (error) {
@@ -19,16 +20,18 @@ function checkErrorThreshold () {
         // Resetting the error count to 1 because the current error has been added already
         errorCount = 1
         lastNotificationTime = currentTime
+        emailNotificationSent = false
     }
 
     // Check if error count exceeds the threshold
-    if (errorCount > 10) {
+    if (errorCount >= 10 && !emailNotificationSent) {
         // Trigger email notification
         sendEmailNotification("High error rate detected", "More than 10 errors occurred in the last minute.")
 
         // Reset error count and update last notification time
         errorCount = 0
         lastNotificationTime = currentTime
+        emailNotificationSent = true
     }
 }
 
