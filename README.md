@@ -15,3 +15,6 @@ Please assume:
     This function is called each time there is an error and appends the error to the end of the log file.
 
 3. We never want to receive more than one email notification per minute.
+
+### Usage
+Read this [main.js](https://github.com/jiviglianco/Error_alarm-challenge/blob/master/main.js) file that has pseudo code
