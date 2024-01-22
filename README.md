@@ -17,4 +17,4 @@ Please assume:
 3. We never want to receive more than one email notification per minute.
 
 ### Usage
-Read this [main.js](https://github.com/jiviglianco/Error_alarm-challenge/blob/master/main.js) file that has pseudo code
+Read this [main.js](main.js) file that has pseudo code
